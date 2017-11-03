@@ -10,9 +10,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SeekBar volumeSeekbar1 = (SeekBar)findViewById(R.id.seekBar1);
-        SeekBar volumeSeekbar2 = (SeekBar)findViewById(R.id.seekBar1);
-        SeekBar volumeSeekbar3 = (SeekBar)findViewById(R.id.seekBar1);
-        SeekBar volumeSeekbar4 = (SeekBar)findViewById(R.id.seekBar1);
+        SeekBar volumeSeekbar1 = (SeekBar)findViewById(R.id.seekBar2);
+
+        Ayar sesAyari=new Ayar(this);
+
+        sesAyari.degistir(Ayar.Tip.alarm,Ayar.Yon.arti);
+
+
     }
 }
