@@ -15,29 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        seekBars[0] = (SeekBar) findViewById(R.id.seekBar1);
-        seekBars[1] = (SeekBar) findViewById(R.id.seekBar2);
-        seekBars[2] = (SeekBar) findViewById(R.id.seekBar3);
-        seekBars[3] = (SeekBar) findViewById(R.id.seekBar4);
-
-        final AudioManager audioManager  = (AudioManager) getSystemService(AUDIO_SERVICE);
-
-        seekBars[0].setMax(audioManager
-                .getStreamMaxVolume(AudioManager.STREAM_ALARM));
-        seekBars[0].setProgress(audioManager
-                .getStreamVolume(AudioManager.STREAM_ALARM));
-        seekBars[1].setMax(audioManager
-                .getStreamMaxVolume(AudioManager.STREAM_MUSIC));
-        seekBars[1].setProgress(audioManager
-                .getStreamVolume(AudioManager.STREAM_MUSIC));
-        seekBars[2].setMax(audioManager
-                .getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL));
-        seekBars[2].setProgress(audioManager
-                .getStreamVolume(AudioManager.STREAM_VOICE_CALL));
-        seekBars[3].setMax(audioManager
-                .getStreamMaxVolume(AudioManager.STREAM_RING));
-        seekBars[3].setProgress(audioManager
-                .getStreamVolume(AudioManager.STREAM_RING));
+        final AudioManager audioManager = InitCurrentVolumes();
 
         seekBars[0].setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
         {
@@ -122,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        InitCurrentVolumes();
+    }
+    protected AudioManager InitCurrentVolumes(){
         final AudioManager audioManager  = (AudioManager) getSystemService(AUDIO_SERVICE);
         seekBars[0] = (SeekBar) findViewById(R.id.seekBar1);
         seekBars[1] = (SeekBar) findViewById(R.id.seekBar2);
@@ -143,5 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 .getStreamMaxVolume(AudioManager.STREAM_RING));
         seekBars[3].setProgress(audioManager
                 .getStreamVolume(AudioManager.STREAM_RING));
+        return  audioManager;
     }
 }
