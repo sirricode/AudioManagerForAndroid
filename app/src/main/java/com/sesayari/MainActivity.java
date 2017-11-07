@@ -4,11 +4,14 @@ import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     SeekBar seekBars[] = new SeekBar[4];
@@ -104,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Ayar sesAyari=new Ayar(this);
-
 
     }
     @Override
