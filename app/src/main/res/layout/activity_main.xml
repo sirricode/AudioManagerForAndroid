@@ -8,6 +8,13 @@
     android:padding="10dp"
     tools:context="com.sesayari.MainActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -30,7 +37,7 @@
             tools:layout_editor_absoluteY="172dp" />
 
         <SeekBar
-            android:id="@+id/seekBar2"
+            android:id="@+id/seekBar1"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_weight="1" />
@@ -60,7 +67,7 @@
             tools:layout_editor_absoluteY="306dp" />
 
         <SeekBar
-            android:id="@+id/seekBar8"
+            android:id="@+id/seekBar2"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1" />
@@ -90,7 +97,7 @@
             tools:layout_editor_absoluteY="102dp" />
 
         <SeekBar
-            android:id="@+id/seekBar7"
+            android:id="@+id/seekBar3"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_weight="1" />
@@ -120,11 +127,16 @@
             tools:layout_editor_absoluteY="233dp" />
 
         <SeekBar
-            android:id="@+id/seekBar9"
+            android:id="@+id/seekBar4"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1" />
 
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
