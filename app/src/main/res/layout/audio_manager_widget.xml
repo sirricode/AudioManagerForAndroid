@@ -18,6 +18,7 @@
             android:id="@+id/alarmNeg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/widget_button"
             android:text="-"
             tools:ignore="DuplicateIds" />
 
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/imageView"
+            android:background="@drawable/widget_button"
             android:text="+" />
     </LinearLayout>
 
@@ -51,6 +53,7 @@
             android:id="@+id/callNeg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/widget_button"
             android:text="-" />
 
         <ImageView
