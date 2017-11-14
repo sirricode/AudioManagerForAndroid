@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.button);
         final Intent intNav = new Intent(this, BottomNavigation.class);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(intNav);
-            }
-        });
-        final AudioManager audioManager = InitCurrentVolumes();
+                @Override
+                public void onClick(View view) {
+                    startActivity(intNav);
+                }
+            });
+                final AudioManager audioManager = InitCurrentVolumes();
 
         seekBars[0].setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
         {
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar arg0)
             {
             }
-
             @Override
             public void onProgressChanged(SeekBar arg0, int progress, boolean arg2)
             {
@@ -54,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar arg0)
             {
+
             }
 
             @Override
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         progress, 0);
             }
         });
-        Ayar sesAyari=new Ayar(this);
+
 
     }
     @Override
